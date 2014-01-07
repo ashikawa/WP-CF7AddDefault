@@ -33,14 +33,19 @@ function wpcf7_add_default($tag) {
         if ($tag['name'] !== $key) {
             continue;
         }
-        // ショートタグ内の default 値を優先
-        foreach ($tag['options'] as $i => $option) {
-            if (strpos($option, 'default:') === 0) {
-                return $tag;
+
+        $basetype = $tag['basetype'];
+
+        if (in_array($basetype, array('checkbox', 'radio', 'select'))) {
+            // ショートタグ内の default 値を優先
+            foreach ($tag['options'] as $i => $option) {
+                if (strpos($option, 'default:') === 0) {
+                    return $tag;
+                }
             }
+            // GET の値を default パラメータに設定
+            $tag['options'][] = "default:$value";
         }
-        // GET の値を default パラメータに設定
-        $tag['options'][] = "default:$value";
     }
 
     return $tag;
