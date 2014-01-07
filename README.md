@@ -4,7 +4,7 @@ Contact Form 7 の初期値を GET パラメータから設定する
 
 ## Instration
 
-解答した zip ファイルをプラグインディレクトリにアップロードし、プラグインを有効にする。  
+解凍した zip ファイルをプラグインディレクトリにアップロードし、プラグインを有効にする。  
 README.md は削除して良い。
 
 
@@ -13,7 +13,7 @@ README.md は削除して良い。
 ContactForm7 を設置しているページへフォーム名と同じパラメータをつけてアクセスすると
 
 > *url*  
-> http://example.com/?page_id=1&**your-country=2**  
+> http://example.com/?page_id=1&your-country=2  
 > 
 > *html*  
 > [select **your-country** "China" "India" "San Marino"]
