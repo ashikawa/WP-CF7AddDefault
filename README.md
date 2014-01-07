@@ -1,6 +1,7 @@
 # CF7 Add Default
 
-Contact Form 7 の初期値を GET パラメータから設定する
+Contact Form 7 の初期値を GET パラメータから設定する。  
+checkbox, radio, select のみ対応。  
 
 ## Instration
 
